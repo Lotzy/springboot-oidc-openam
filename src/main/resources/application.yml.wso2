@@ -1,0 +1,22 @@
+server:
+  port: 8080   # HTTP (Tomcat) port
+  context-path: /sharingcities
+
+openam:
+  client:
+    clientId: LfFuWb9wqlf0i3mVZuBJ4NZm5Aka
+    clientSecret: e3bWXXzLaxrw8qPLzwTnuf07zV4a
+#    accessTokenUri: https://almacloud.inet2.org/oauth2/token
+    accessTokenUri: http://localhost:9063/oauth2/token
+    userAuthorizationUri: http://localhost:9763/oauth2/authorize
+    tokenName: access_token
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+    scope: openid email profile
+#    grantType: refresh_token
+  resource:
+    userInfoUri: http://localhost:9063/oauth2/userinfo
+
+logging:
+  level:
+    org.springframework.security: DEBUG
